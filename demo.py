@@ -1,43 +1,45 @@
+.
+
 ROOM_LIST = [
-    "living room",
-    "kitchen",
-    "bedroom",
-    "bathroom",
-    "hallway",
+    "gym",
+    "pool",
+    "cafeteria",
+    "therapy room",
+    "reception",
 ]
 
 OBJECT_LIST = [
-    "apple",
-    "t-shirt",
-    "cup"
+    "walker",
+    "ball",
+    "towel"
 ]
 
 OBJECT_POSITION_LIST = {
-    "apple": "fridge",
-    "t-shirt": "closet",
-    "cup": "table",
+    "walker": "closet",
+    "ball": "storage",
+    "towel": "shelf",
 }
 
 CONTAINER_LIST = [
-    "fridge",
     "closet",
-    "table",
+    "storage",
     "shelf",
+    "rack",
 ]
 
 CONTAINER_POSITION_LIST = {
-    "fridge": "kitchen",
-    "closet": "bedroom",
-    "table": "living room",
-    "shelf": "living room",
+    "closet": "therapy room",
+    "storage": "gym",
+    "shelf": "cafeteria",
+    "rack": "pool",
 }
 
 CONNECTED_ROOM = {
-    "hallway": ["kitchen", "bedroom", "bathroom", "living room"],
-    "kitchen": ["hallway"],
-    "bedroom": ["hallway"],
-    "bathroom": ["hallway"],
-    "living room": ["hallway"],
+    "reception": ["gym", "pool", "cafeteria", "therapy room"],
+    "gym": ["reception"],
+    "pool": ["reception"],
+    "cafeteria": ["reception"],
+    "therapy room": ["reception"],
 }
 
 ACTION_DICT = {
@@ -49,36 +51,41 @@ ACTION_DICT = {
 }
 
 GROUNDED_ACTION_LIST = [
-    "move living room",
-    "move kitchen",
-    "move bedroom",
-    "move bathroom",
-    "move hallway",
-    "open fridge",
+    "move gym",
+    "move pool",
+    "move cafeteria",
+    "move therapy room",
+    "move reception",
     "open closet",
+    "open storage",
     "open shelf",
-    "close fridge",
+    "open rack",
     "close closet",
+    "close storage",
     "close shelf",
-    "pick apple",
-    "pick t-shirt",
-    "pick cup",
-    "place apple fridge",
-    "place apple closet",
-    "place apple table",
-    "place apple shelf",
-    "place apple bedroom",
-    "place apple bathroom",
-    "place apple hallway",
-    "place t-shirt fridge",
-    "place t-shirt closet",
-    "place t-shirt table",
-    "place t-shirt shelf",
-    "place t-shirt bedroom",
-    "place t-shirt bathroom",
-    "place t-shirt hallway",
-    "place cup fridge",
-    "place cup closet",
-    "place cup table",
-    "place cup shelf",
+    "close rack",
+    "pick walker",
+    "pick ball",
+    "pick towel",
+    "place walker closet",
+    "place walker storage",
+    "place walker shelf",
+    "place walker rack",
+    "place walker therapy room",
+    "place walker gym",
+    "place walker cafeteria",
+    "place ball closet",
+    "place ball storage",
+    "place ball shelf",
+    "place ball rack",
+    "place ball therapy room",
+    "place ball gym",
+    "place ball cafeteria",
+    "place towel closet",
+    "place towel storage",
+    "place towel shelf",
+    "place towel rack",
+    "place towel therapy room",
+    "place towel gym",
+    "place towel cafeteria",
 ]
